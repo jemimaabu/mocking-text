@@ -1,19 +1,19 @@
 var textInput = document.getElementById("text-input");
-var spongebobOutput = document.getElementById("spongebob-output")
+var mockingText = document.getElementById("mocking-text")
 
-function spongebobChicken(str) {
+function mockingConverter(str) {
 	const strArray = str.toLowerCase().split("");
-	const spongebobed = strArray.map((x,i) => i % 2 === 0 ? x : x.toUpperCase());
-	return spongebobed.join("");
+	const mocked = strArray.map((x,i) => i % 2 === 0 ? x : x.toUpperCase());
+	return mocked.join("");
 }
 
 textInput.onkeyup = function(e) {
     const input = e.target.value
-    spongebobOutput.innerText = spongebobChicken(input)
+    mockingText.innerText = mockingConverter(input)
 };
 
 function copyText() {
-    spongebobOutput.select();
+    mockingText.select();
     document.execCommand("copy");
     alert("Copied text");
   }
