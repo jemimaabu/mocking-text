@@ -3,7 +3,7 @@ var spongebobOutput = document.getElementById("spongebob-output")
 
 function spongebobChicken(str) {
 	const strArray = str.toLowerCase().split("");
-	const spongebobed = strArray.map((x,i) => i % 2 === 0 ? x.toUpperCase() : x);
+	const spongebobed = strArray.map((x,i) => i % 2 === 0 ? x : x.toUpperCase());
 	return spongebobed.join("");
 }
 
