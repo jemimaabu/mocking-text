@@ -13,7 +13,13 @@ textInput.onkeyup = function(e) {
 };
 
 function copyText() {
+    // Implementation copied from here: https://www.w3schools.com/howto/howto_js_copy_clipboard.asp
     mockingText.select();
-    document.execCommand("copy");
-    alert("Copied text");
+    mockingText.setSelectionRange(0, 99999);
+    navigator.clipboard.writeText(mockingText.value);
+
+    // for some reason, calling alert immediately results in the text not being copied
+    setTimeout(function () {
+        alert("Copied text");
+    }, 100);
   }
