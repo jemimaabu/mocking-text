@@ -7,6 +7,10 @@ const ALWAYS_UPPERCASE = [
 
 const ALWAYS_LOWERCASE = [
     "i", // uppercase `i` (`I`) can be confused with lowercase `L` (`l`)
+    "í", // accented i
+    "ì", // accented i
+    "î", // accented i
+    "ï", // accented i
     "o", // uppercase `o` (`O`) can be confused with zero (`0`)
 ];
 
